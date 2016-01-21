@@ -372,16 +372,16 @@ HTMLWidgets.widget({
                 break;
               }
             }
-          }
-          // If we don't already have a child node for this branch, create it.
-          if (!foundChild) {
-            childNode = {"name": nodeName, "children": []};
-            children.push(childNode);
+            // If we don't already have a child node for this branch, create it.
+            if (!foundChild) {
+              childNode = {"name": nodeName, "children": []};
+              children.push(childNode);
+            } else {
+              // Reached the end of the sequence; create a leaf node.
+              childNode = {"name": nodeName, "size": size};
+              children.push(childNode);
+            }
             currentNode = childNode;
-          } else {
-            // Reached the end of the sequence; create a leaf node.
-            childNode = {"name": nodeName, "size": size};
-            children.push(childNode);
           }
         }
       };
