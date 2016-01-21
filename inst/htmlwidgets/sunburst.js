@@ -330,7 +330,7 @@ HTMLWidgets.widget({
           .style("fill", function(d) { return colors(d); });
 
       g.append("text")
-          .attr("x", li.w + 10) // replaced from / 2
+          .attr("x", 5 ) // li.w replaced from / 2
           .attr("y", li.h / 2)
           .attr("dy", "0.35em")
           .attr("text-anchor", "left")
