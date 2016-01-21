@@ -126,10 +126,12 @@ HTMLWidgets.widget({
     // Fade all but the current sequence, and show it in the breadcrumb trail.
     function mouseover(d) {
 
-      var percentage = (100 * d.value / totalSize).toPrecision(3);
-      var percentageString = percentage + "%";
-      if (percentage < 0.1) {
-        percentageString = "< 0.1%";
+      //var percentage = (100 * d.value / totalSize).toPrecision(3);
+      //var percentageString = percentage + "%";
+      var percentage = d.value;
+      var percentageString = d.value;
+      if (percentage < 5) {
+        percentageString = "< 5";
       }
 
       var countString = [
