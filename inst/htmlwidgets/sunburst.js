@@ -125,7 +125,7 @@ HTMLWidgets.widget({
 
     // Fade all but the current sequence, and show it in the breadcrumb trail.
     function mouseover(d) {
-
+      // IMPORTANT: Switch to change between values and percentages
       //var percentage = (100 * d.value / totalSize).toPrecision(3);
       //var percentageString = percentage + "%";
       var percentage = d.value;
@@ -330,7 +330,7 @@ HTMLWidgets.widget({
           .style("fill", function(d) { return colors(d); });
 
       g.append("text")
-          .attr("x", li.w / 2)
+          .attr("x", li.w + 10) // replaced from / 2
           .attr("y", li.h / 2)
           .attr("dy", "0.35em")
           .attr("text-anchor", "left")
